@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "singularName": "video",
+    "pluralName": "videos",
+    "displayName": "Videos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "map": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::map.map",
+      "inversedBy": "videos"
+    },
+    "side": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::side.side",
+      "inversedBy": "videos"
+    },
+    "nade_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::nade-type.nade-type",
+      "inversedBy": "videos"
+    },
+    "plant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::plant.plant",
+      "inversedBy": "videos"
+    }
+  }
+}
